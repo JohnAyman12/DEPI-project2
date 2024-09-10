@@ -1,0 +1,510 @@
+/* ----------------------------------------------------------------------------------------- */
+/* -----------------------------------------globals----------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(241, 245, 255);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  height: fit-content;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  background-color: rgb(76, 44, 255);
+  color: white;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: 4px 4px black;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.grid-parent {
+  display: grid;
+}
+
+.page-container {
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* -----------------------------------------header------------------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
+
+header {
+  background-color: rgb(241, 245, 255);
+  min-height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-weight: 600;
+  z-index: 100;
+  box-shadow: 0px 5px 20px 0px rgb(12, 25, 49);
+  position: fixed;
+  width: 100%;
+}
+
+header .links-nav .in-page {
+  color: rgb(76, 44, 255);
+}
+
+header img {
+  height: 2rem;
+}
+
+header > * {
+  height: 100%;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+header ul {
+  height: 100%;
+  align-content: center;
+}
+
+header ul li {
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+header .links-nav a {
+  transition: 0.5s;
+}
+
+header .links-nav a:hover {
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: rgb(76, 44, 255);
+}
+
+@media (width < 1100px) {
+  header nav {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* -------------------------------------------main------------------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
+
+main {
+  background-color: rgb(241, 245, 255);
+  margin-top: 18vh;
+  margin-bottom: 2rem;
+}
+
+@media (width < 1100px) {
+  main {
+    margin-top: 12vh;
+  }
+}
+/* -------------------------------------------hero------------------------------------------ */
+main .hero .flex-parent {
+  justify-content: space-around;
+  margin: 0 2rem;
+}
+
+main .hero .landing-text h2 {
+  font-size: 2rem;
+  align-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+main .hero .landing-text img {
+  position: absolute;
+  height: 10rem;
+  left: -185px;
+}
+
+main .hero .landing-text p {
+  font-size: 2.3rem;
+  align-content: center;
+  z-index: 10;
+}
+
+main .hero .landing-text p a {
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+main .hero .landing-video {
+  text-align: center;
+}
+
+main .hero .landing-video video {
+  width: 800px;
+  border-radius: 2rem;
+}
+
+main .hero .hero-buttons {
+  justify-content: space-around;
+}
+
+main .hero .landing-text p a {
+  transition: 0.5s;
+  border-radius: 1rem;
+}
+
+main .hero .landing-text p a:hover {
+  padding: 0.5rem;
+}
+
+main .hero .landing-text p .branding:hover {
+  background-color: rgb(15, 216, 167);
+}
+
+main .hero .landing-text p .websites:hover {
+  background-color: rgb(252, 185, 0);
+}
+
+main .hero .landing-text p .content:hover {
+  background-color: rgb(247, 141, 167);
+}
+
+@media (width < 1250px) {
+  main .hero .landing-video video {
+    width: 600px;
+  }
+}
+
+@media (width < 1100px) {
+  main .hero .flex-parent {
+    display: block;
+  }
+
+  main .hero .landing-text {
+    margin-bottom: 2rem;
+  }
+}
+
+main .hero .hero-buttons button {
+  padding: 0.2rem 2rem;
+  background-color: rgb(254, 254, 254);
+  color: black;
+}
+
+main .hero .hero-buttons button:hover {
+  background-color: rgb(76, 44, 255);
+  color: white;
+  box-shadow: 4px 4px black;
+}
+/* -------------------------------------------ticker------------------------------------------ */
+main .partner-companies {
+  position: relative;
+  margin: 4.5rem 0;
+  text-align: center;
+}
+
+main .partner-companies h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+main .partner-companies img {
+  height: 2.5rem;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+main .partner-companies img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.ticker-wrap {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  bottom: -3.5rem;
+  height: 3.5rem;
+}
+
+.ticker {
+  display: inline-block;
+  margin-top: 5px;
+  animation: marquee 20s linear infinite;
+}
+
+.item-collection-1 {
+  position: relative;
+  left: 0%;
+  animation: swap 20s linear infinite;
+}
+
+.item {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: black;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+/* Transition */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swap {
+  0%,
+  50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
+}
+/* ----------------------------------------what we do---------------------------------------- */
+main .what-we-do {
+  text-align: center;
+}
+
+main .what-we-do h2 {
+  font-size: 2.5rem;
+}
+
+main .what-we-do p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+main .what-we-do button {
+  flex-grow: 1;
+  margin: 0 2rem;
+}
+
+main .what-we-do .flex-parent {
+  justify-content: space-around;
+  margin: 0 5rem;
+}
+/* ----------------------------------------need help---------------------------------------- */
+main .need-help {
+  text-align: center;
+  margin: 4rem 1rem 0;
+}
+
+main .need-help div {
+  background-color: rgb(12, 25, 49);
+  color: white;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 2rem 10rem;
+  border-radius: 2rem;
+}
+
+main .need-help div p {
+  margin: 1rem 0;
+}
+
+main .need-help button:hover {
+  box-shadow: 4px 4px white;
+}
+/* -----------------------------------------Services---------------------------------------- */
+main .services {
+  margin: 0 5rem;
+  padding: 2rem;
+}
+
+main .service {
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+main .service > * {
+  margin: 0 2rem;
+}
+
+main .service-content {
+  align-content: center;
+}
+
+main .service-content h2 {
+  font-size: 2.5rem;
+}
+
+main .service-content ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+main img {
+  background: url(./img/dots.webp);
+  height: 50vh;
+}
+
+main .service-content p {
+  margin: 1rem 0;
+}
+
+main .service-content p a {
+  color: rgb(94, 118, 248);
+}
+
+main .service-content ul li::marker {
+  color: rgb(15, 216, 167);
+}
+
+main .services .service1 {
+  flex-direction: row-reverse;
+}
+
+main .services .service3 {
+  flex-direction: row-reverse;
+}
+
+@media (width < 1200px) {
+  main .service {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* ------------------------------------------footer----------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+footer {
+  background-color: rgb(12, 25, 49);
+  color: white;
+  padding-top: 2rem;
+  grid-template-areas:
+    "resources resources find-us find-us logo"
+    "resources resources find-us find-us logo"
+    "resources resources . contacts contacts"
+    "btn btn . social social"
+    "links links . copyright copyright";
+  text-align: center;
+}
+
+footer > * {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: Plus Jakarta Sans;
+  font-size: large;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+footer img {
+  height: 3rem;
+}
+
+footer a:hover {
+  color: rgb(15, 216, 167);
+}
+
+footer h2 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+footer .resources {
+  grid-area: resources;
+}
+
+footer .resources ul li {
+  margin: 0.8rem;
+}
+
+footer .find-us {
+  grid-area: find-us;
+}
+
+footer .find-us ul li {
+  margin: 0.8rem;
+}
+
+footer button {
+  background-color: rgb(254, 218, 45);
+  color: rgb(12, 25, 49);
+}
+
+footer .footer-btn {
+  grid-area: btn;
+  margin: 2rem 0;
+}
+
+footer button:hover {
+  background-color: rgb(76, 44, 255);
+  color: white;
+  box-shadow: 4px 4px white;
+}
+
+footer .footer-logo {
+  grid-area: logo;
+}
+
+footer .footer-contacts {
+  grid-area: contacts;
+  margin: 2rem 0;
+}
+
+footer .footer-social-media {
+  grid-area: social;
+}
+
+footer .footer-social-media ul li {
+  display: inline-block;
+}
+
+footer .footer-social-media ul li img {
+  height: 2rem;
+}
+
+footer .footer-links {
+  grid-area: links;
+  margin: 2rem 0;
+}
+
+footer .footer-links ul li {
+  display: inline-block;
+}
+
+footer .footer-copyright {
+  grid-area: copyright;
+}
+
+@media (width > 1100px) {
+  footer {
+    display: grid;
+  }
+}

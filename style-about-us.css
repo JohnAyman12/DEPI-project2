@@ -1,0 +1,164 @@
+/* -------------------------------------------hero------------------------------------------ */
+main .hero .landing-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+main .hero .landing-text h2 {
+  font-size: 5rem;
+}
+
+main .hero .about-us .discuss-project {
+  background-color: rgb(76, 44, 255);
+  color: white;
+}
+
+main .hero .about-us .hero-buttons {
+  justify-content: center;
+  gap: 2rem;
+}
+/* -----------------------------------------services 1---------------------------------------- */
+main .services .service > p {
+  font-size: 2.5rem;
+  background: url(./img/dots.webp);
+  text-align: center;
+}
+/* -------------------------------------------team------------------------------------------ */
+main .team {
+  margin: 0 10em;
+}
+
+main .team .team-header {
+  text-align: center;
+}
+
+main .team .team-header h2 {
+  font-size: 3rem;
+}
+
+main .team .cards {
+  width: 100%;
+  gap: 2rem;
+  grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
+}
+
+main .team .card {
+  margin: 1rem 0;
+  justify-self: center;
+  width: 100%;
+}
+
+main .team .card .card-img {
+  border-radius: 2rem;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+main .team .card .card-img img {
+  border-radius: 2rem;
+  transition: 0.5s;
+  width: 100%;
+  height: auto;
+}
+
+main .team .card .card-img img:hover {
+  transform: scale(1.1);
+}
+
+main .team .card h2 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+main .team .cards .card1 {
+  grid-area: card1;
+}
+
+main .team .cards .card2 {
+  grid-area: card2;
+}
+
+main .team .cards .card3 {
+  grid-area: card3;
+}
+
+main .team .cards .card4 {
+  grid-area: card4;
+}
+
+main .team .cards .card5 {
+  grid-area: card5;
+}
+
+main .team .cards .card6 {
+  grid-area: card6;
+}
+
+@media (width < 1200px) {
+  main .team .cards {
+    display: block;
+  }
+}
+/* -----------------------------------------services 2------------------------------------------ */
+main .services-part2 .service2 button {
+  background-color: white;
+  color: black;
+}
+
+main .services-part2 .service2 .service2-imgs {
+  width: 50%;
+  flex-direction: row-reverse;
+}
+
+main .services-part2 .service2 .service2-imgs img{
+  width: 50%;
+  height: auto;
+}
+
+main .services-part2 .service2 button:hover {
+  background-color: rgb(76, 44, 255);
+  color: white;
+}
+
+main .services-part2 .service3 .service3-divs {
+  gap: 1rem;
+}
+
+main .services-part2 .service3 .service3-divs .service3-div {
+  border: 3px black solid;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 60vh;
+}
+
+main .services-part2 .service3 .service3-divs .service3-div h3 {
+  font-size: 1.5rem;
+  border-bottom: 2rem;
+}
+
+main .services-part2 .service3 .service3-divs .service3-div1 {
+  background-color: rgb(98, 235, 201);
+}
+
+main .services-part2 .service3 .service3-divs .service3-div2 {
+  background-color: rgb(254, 218, 45);
+}
+
+main .services-part2 .service3 .service3-divs .service3-div3 {
+  background-color: rgb(216, 68, 68);
+}
+
+main .services-part2 .service3 h2 {
+  font-size: 2rem;
+}
+
+main .services-part2 .service3 ul {
+  gap: 1.5rem;
+}
+
+main .services-part2 .service3 ul li {
+  list-style-type: none;
+}

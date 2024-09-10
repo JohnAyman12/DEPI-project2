@@ -1,0 +1,213 @@
+/* ----------------------------------------------------------------------------------------- */
+/* -----------------------------------------globals----------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+body {
+  background-color: white;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* -------------------------------------------main------------------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
+
+main {
+  background-color: white;
+  margin-top: 10vh;
+}
+/* -------------------------------------------hero------------------------------------------ */
+
+main .hero {
+  background-color: rgb(241, 245, 255);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+main .hero .our-work {
+  text-align: center;
+}
+
+main .hero .our-work h2 {
+  font-size: 4rem;
+}
+
+main .hero .our-work p {
+  font-size: 1.5rem;
+}
+
+main .hero .our-work .hero-buttons .discuss-project {
+  background-color: rgb(76, 44, 255);
+  color: white;
+}
+
+main .hero .our-work .landing-img .canny-img-div {
+  overflow: hidden;
+  border-radius: 2rem;
+  text-align: center;
+  align-items: center;
+  min-width: 10rem;
+  width: fit-content;
+  margin-right: 15rem;
+  margin-left: 5rem;
+}
+
+main .hero .our-work .landing-img .canny {
+  position: relative;
+  transition: 0.5s;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+main .hero .our-work .landing-img .canny:hover {
+  transform: scale(1.1);
+}
+
+main .hero .our-work .landing-img .google {
+  position: absolute;
+  right: 5rem;
+  top: 8rem;
+  height: 8rem;
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+
+main .hero .our-work .landing-img .google:hover {
+  box-shadow: 4px 4px black;
+}
+
+@media (width < 1250px) {
+  main .hero .our-work {
+    display: block;
+  }
+
+  main .hero .our-work .landing-img .canny-img-div {
+    display: none;
+  }
+
+  main .hero .our-work .landing-img .google {
+    display: none;
+  }
+}
+
+@media (width < 1100px) {
+  main .hero .our-work .hero-buttons .discuss-project {
+    margin: 2rem;
+  }
+}
+/* -------------------------------------------projects------------------------------------------ */
+main .projects {
+  margin: 0 10em;
+}
+
+main .projects .project-btns button {
+  background-color: #0000;
+  color: rgb(12, 25, 49);
+  border: 2px rgb(12, 25, 49) solid;
+  transition: 0.5s;
+}
+
+main .projects .project-btns button:hover {
+  background-color: rgb(204, 216, 255);
+  box-shadow: none;
+}
+
+main .projects .cards-btns button {
+  background-color: #0000;
+  color: rgb(12, 25, 49);
+  border: 2px rgb(12, 25, 49) solid;
+  transition: 0.5s;
+  font-size: 0.8rem;
+}
+
+main .projects .cards {
+  width: 100%;
+  gap: 2rem;
+  grid-template-areas:
+    "card1 card2 card3"
+    "card4 card4 card4"
+    "card5 card6 card7"
+    "card8 card8 card8"
+    "card9 card10 card11";
+}
+
+main .projects .card {
+  margin: 1rem 0;
+  justify-self: center;
+  width: 100%;
+}
+
+main .projects .card .card-img {
+  border-radius: 2rem;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+main .projects .card .card-img img {
+  border-radius: 2rem;
+  transition: 0.5s;
+  width: 100%;
+  height: auto;
+}
+
+main .projects .card .card-img img:hover {
+  transform: scale(1.1);
+}
+
+main .projects .card h2 {
+  margin: 1rem 0;
+}
+
+main .projects .cards-btns button:hover {
+  background-color: rgb(204, 216, 255);
+  box-shadow: none;
+}
+
+main .projects .cards .card1 {
+  grid-area: card1;
+}
+
+main .projects .cards .card2 {
+  grid-area: card2;
+}
+
+main .projects .cards .card3 {
+  grid-area: card3;
+}
+
+main .projects .cards .card4 {
+  grid-area: card4;
+}
+
+main .projects .cards .card5 {
+  grid-area: card5;
+}
+
+main .projects .cards .card6 {
+  grid-area: card6;
+}
+
+main .projects .cards .card7 {
+  grid-area: card7;
+}
+
+main .projects .cards .card8 {
+  grid-area: card8;
+}
+
+main .projects .cards .card9 {
+  grid-area: card9;
+}
+
+main .projects .cards .card10 {
+  grid-area: card10;
+}
+
+main .projects .cards .card11 {
+  grid-area: card11;
+}
+
+@media (width < 1200px) {
+  main .projects .cards {
+    display: block;
+  }
+}
+

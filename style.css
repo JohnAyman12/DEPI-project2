@@ -164,6 +164,8 @@ main .hero .landing-video video {
 
 main .hero .hero-buttons {
   justify-content: space-around;
+  width: 100%;
+  text-align: center;
 }
 
 main .hero .landing-text p a {
